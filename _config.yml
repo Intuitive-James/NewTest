@@ -3,7 +3,7 @@ email:
 description: 
 baseurl: "/NewTest"
 url: "http://intuitive-james.github.io/NewTest/"
-fixedNav: 'true'
+fixedNav: 'false'
 theme: grey
 twitterUsername: 
 githubUsername: 
