@@ -2,19 +2,13 @@
         {% for post in site.posts  %}
 
             {% if forloop.first %}
-                <ul class="c-archives__list">
+                <ul>
             {% endif %}
-                <li class="c-archives__item">
+                <li>
                     <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>          
                 </li>
             {% if forloop.last %}
-                </ul>
-            {% else %}
-                {% if this_year != next_year %}
-                </ul>
-                <h2 class="c-archives__year" id="{{ next_year }}-ref">{{next_year}}</h2>
-                <ul class="c-archives__list">
-                {% endif %}
+                </ul>          
             {% endif %}
         {% endfor %}
   </div>
