@@ -9,7 +9,7 @@
                {% for post in posts %}
                  {% if post.url %}
                   <li>
-                    <a href="{{ post.url }}">              
+                    <a href="{{ post.url | prepend: site.baseurl  }}">              
                       {{ post.title }}
                     </a>
                   </li>

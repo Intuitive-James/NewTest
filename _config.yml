@@ -7,7 +7,7 @@ fixedNav: 'false'
 theme: grey
 
 # Build settings
-permalink: :categories/:title
+permalink: :categories/:title.html
 markdown: kramdown
 include: [_pages]
 exclude: [_site, CHANGELOG.md, LICENSE, README.md]
