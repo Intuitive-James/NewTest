@@ -1,37 +1,5 @@
-  <div class="sidebar">
-        {% for post in site.posts  %}
-
-            {% if forloop.first %}
-                <ul>
-            {% endif %}
-                <li>
-                    <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>          
-                </li>
-            {% if forloop.last %}
-                </ul>          
-            {% endif %}
-        {% endfor %}
-  </div>
-
-    <div class="sidebar">
-      <ul>
-        {% assign tags_list = site.categories %}  
-          {% if tags_list.first[0] == null %}
-            {% for tag in tags_list %} 
-              <li><a href="#{{ tag }}">{{ tag | capitalize }} <span>{{ site.tags[tag].size }}</span></a></li>
-            {% endfor %}
-          {% else %}
-            {% for tag in tags_list %} 
-              <li><a href="#{{ tag[0] }}">{{ tag[0] | capitalize }} <span>{{ tag[1].size }}</span></a></li>
-            {% endfor %}
-          {% endif %}
-        {% assign tags_list = nil %}
-        </ul>
-  </div>
-
-
  {% for category in site.categories %}
-     <div class="catbloc" id="{{ category | first | remove:' ' }}">
+     <div class="sidebar catbloc" id="{{ category | first | remove:' ' }}">
           <h2>{{ category | first }}</h2>
 
           <ul>

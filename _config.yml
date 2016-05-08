@@ -1,17 +1,9 @@
 title: Test Documentation
-email: 
-description: 
 baseurl: "/NewTest"
 url: "http://intuitive-james.github.io/NewTest/"
 fixedNav: 'false'
 theme: grey
-twitterUsername: 
-githubUsername: 
-dribbbleUsername:
-codepenUsername:
 
-# Build settings
-permalink: /:category/:title
 markdown: kramdown
 include: [_pages]
 exclude: [_site, CHANGELOG.md, LICENSE, README.md]
