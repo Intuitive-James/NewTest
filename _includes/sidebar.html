@@ -1,5 +1,7 @@
+ 
+<div class="sidebar">
  {% for category in site.categories %}
-     <div class="sidebar catbloc" id="{{ category | first | remove:' ' }}">
+     <div class="catbloc" id="{{ category | first | remove:' ' }}">
           <h2>{{ category | first }}</h2>
 
           <ul>
@@ -18,3 +20,5 @@
          </ul>
      </div>
  {% endfor %}
+
+</div>
