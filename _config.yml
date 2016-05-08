@@ -11,7 +11,7 @@ dribbbleUsername:
 codepenUsername:
 
 # Build settings
-permalink: /:category/:title
+permalink: /:year/:month/:title
 markdown: kramdown
 include: [_pages]
 exclude: [_site, CHANGELOG.md, LICENSE, README.md]
