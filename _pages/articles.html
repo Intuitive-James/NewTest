@@ -27,30 +27,15 @@ permalink: /articles/
 {% endfor %}
 
 
-
-
-
-{% for issue in site.collections %}
-   <p>|</p>
-    {% for test in issue %}
-    <p>#</p>
-
-      <p class="text-muted">{{ test}}</p>
-    <p class="text-muted">{{ test[1]}}</p>
-      <p class="text-muted">{{ test.label}}</p>
-     <p>££</p>
-    {% endfor %}
-
-{% endfor %}
-
-
 {% for collection in site.collections %}
   
   {% assign label = collection.label %}
 
 
   {% for collection in site.categories[label] %}
-    {{collection}}newtest
+   <p> {{collection.url}}newtest
+      {{collection.title}}
+      </p>
   {% endfor %}
 
 
