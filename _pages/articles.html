@@ -50,7 +50,9 @@ permalink: /articles/
    <p>|</p>
     {% for test in issue %}
     <p>#</p>
-           <p class="text-muted">{{ test.content }}</p>
+           <p class="text-muted">{{ test }}</p>
+            <p class="text-muted">{{ test.url }}</p>
+             <p class="text-muted">{{ test.title }}</p>
     {% endfor %}
 
 {% endfor %}
