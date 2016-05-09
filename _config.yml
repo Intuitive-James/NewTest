@@ -9,7 +9,7 @@ theme: grey
 # Build settings
 permalink: :categories/:title.html
 markdown: kramdown
-include: [_pages,_categories]
+include: [_pages,categories]
 exclude: [_site, CHANGELOG.md, LICENSE, README.md]
 sass:
   style: compressed
