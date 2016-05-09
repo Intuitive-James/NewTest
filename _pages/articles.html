@@ -39,7 +39,10 @@ permalink: /articles/
 
       #|{% for innerCollection in collection %}
       <h3>
-      {{innerCollection}}
+      {{innerCollection.title}}
+      {{innerCollection.url}}
+      {{innerCollection.label}}
+      {{innerCollection.size}}
       </h3>
       {% endfor %}|#
   {% endfor %}
