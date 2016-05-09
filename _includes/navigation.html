@@ -2,8 +2,10 @@
   	<div class="c-navigation__container u-container">
   		<div class="intuitive-colours"> </div>
 	  	<img class="c-navigation__item c-navigation__image"></img>
+	  	<container class="c-navigation__text">
 	    <a class="c-navigation__item {% if page.url == '/' %}is-active{% endif %}" href="{{ "/" | prepend: site.baseurl }}">Home</a>
 	    <a class="c-navigation__item {% if page.url == '/articles/' %}is-active{% endif %}" href="{{ "/articles/" | prepend: site.baseurl }}">Articles</a>
 	    <a class="c-navigation__item {% if page.url == '/about/' %}is-active{% endif %}" href="{{ "/about/" | prepend: site.baseurl }}">About</a>
+	    </container>
   	</div>
 </nav>
