@@ -3,14 +3,14 @@
    ========================================================================== */
 
 .c-navigation__container {
-  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 116rem;
   z-index: 10;
   padding-bottom:5px;
   max-width:116rem;
   position:relative;
+  margin:0 auto;
 
   &u-container {
   padding-top:5px;
