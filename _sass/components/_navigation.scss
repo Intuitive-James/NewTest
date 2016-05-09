@@ -27,6 +27,11 @@
   border-left:90px solid #f13333;
   border-right:90px solid #ffc40e;
   }
+  
+  .c-navigation__text {
+  float:left;
+  margin-top:35px;
+  }
 
   &:after {
     content: '';
@@ -80,10 +85,6 @@
   margin-right:5%;
   margin-top:14px;
   float:left;
-  }
-  .c-navigation__text {
-  float:left;
-  margin-top:35px;
   }
 }
 }
