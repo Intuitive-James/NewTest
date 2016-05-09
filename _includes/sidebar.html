@@ -79,13 +79,10 @@
   {% assign label = collection.label %}
 
   <h3>{{label}}</h3>
-  {% for categoryloop in site.categories[label] %}
+  {% for categoryloop in site.categories[label].category %}
     <ul>
-      {% for innerCollection in categoryloop %}   
-      #########################################################################
-    {{innerCollection}}
-    #########################################################################   
-        {% for post in innerCollection %}
+
+        {% for post in categoryloop %}
          {% if post.categories contains  label %}
               {% if post.categories.size  > 0 %}
 
@@ -101,8 +98,7 @@
                         </a>
                   </li>
               {% endif %}
-          {% endif %}
-         {% endfor %}    
+          {% endif %}   
       {% endfor %}
        </ul>
   {% endfor %}
