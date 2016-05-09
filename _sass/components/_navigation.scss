@@ -2,6 +2,16 @@
    Navigation
    ========================================================================== */
 
+  .intuitive-colours {
+  width:270px;
+  height:8px;
+  position:absolute;
+  top:0;
+  left:0;
+  background:#019cd4;
+  border-left:90px solid #f13333;
+  border-right:90px solid #ffc40e;
+
 .c-navigation {
   position: absolute;
   top: 0;
@@ -10,16 +20,6 @@
   width: 100%;
   background: $t-theme;
   z-index: 10;
-
-  &.intuitive-colours {
-  width:270px;
-  height:8px;
-  position:absolute;
-  top:-8px;
-  left:0px;
-  background:#019cd4;
-  border-left:90px solid #f13333;
-  border-right:90px solid #ffc40e;
 }
 
   &u-container {
