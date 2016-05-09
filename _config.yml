@@ -24,11 +24,11 @@ sass:
 #collections
 collections:
     Transfers:
-       title: "Transfers"
+      - title: "Transfers"
        output: true
     Flights:
-        title: "Flights"
+      - title: "Flights"
        output: true
     Contracting:
-       title: "Contracting"
+     - title: "Contracting"
        output: true
