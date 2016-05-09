@@ -41,9 +41,10 @@
 
   <h3>{{label}}</h3>
   {% for collection in site.categories[label] %}
+  {{label}}
     <ul>
 
-      {% for innerCollection in collection[label] %}      
+      {% for innerCollection in collection %}      
         {% for post in innerCollection %}
 
           {% if post.categories.size  > 0 %}
