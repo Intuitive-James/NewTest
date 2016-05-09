@@ -39,11 +39,14 @@ permalink: /articles/
 
       {% for innerCollection in collection %}      
         {% for post in innerCollection %}
-             <li class="{{post.categories.size}}">
-              <a href="{{ post.url | prepend: site.baseurl  }}">
-                {{post.title}}
-              </a>
-            </li>
+
+          {% if post.title != "" %}
+               <li class="{{post.categories.size}}">
+                <a href="{{ post.url | prepend: site.baseurl  }}">
+                  {{post.title}}
+                </a>
+              </li>
+          {% endif %}
          {% endfor %}    
       {% endfor %}
        </ul>
