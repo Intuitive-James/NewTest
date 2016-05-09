@@ -44,3 +44,16 @@ permalink: /articles/
 {% endfor %}
 
 
+{% for collection in site.collections %}
+  
+  {% assign label = collection.label %}
+
+
+  {% for collection in site.categories[label] %}
+    {{collection}}newtest
+  {% endfor %}
+
+
+{% endfor %}
+
+
