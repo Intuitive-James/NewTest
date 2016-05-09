@@ -9,6 +9,9 @@
                   <li>
                     <a href="{{ post.url | prepend: site.baseurl  }}">              
                       {{ post.title }}
+                      {{ post.categories.size}}
+                      {{ post.categories}}
+                      {{ post.size}}
                     </a>
                   </li>
                 {% endif %}
