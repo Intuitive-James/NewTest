@@ -1,4 +1,4 @@
- 
+
 <div class="sidebar">
  {% for category in site.categories %}
      <div class="catbloc" id="{{ category | first | remove:' ' }}">
@@ -19,7 +19,7 @@
             {% for posts in category %}
                {% for post in posts %}
                  {% if post.url %}
-                  <li>
+                  <li class="test1">
                     <a href="{{ post.url | prepend: site.baseurl  }}">              
                       {{ post.title }}
                     </a>
