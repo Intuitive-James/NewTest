@@ -29,15 +29,16 @@ permalink: /articles/
 
 
 {% for collection in site.collections %}
-  {% capture label %}{{ collection | first }}{% endcapture %}
-  <h3>All documents listed in collection '{{ label}}'</h3>
-
-  {% for doc in site.collections.[label].docs %}
-    <li>
-      <span>{{ doc.date | date_to_string }}</span>
-      <a href="{{ site.url }}{{ doc.url }}">{{ doc.title }}</a>
-    </li>
-  {% endfor %}
-  <h2>test
+    <nav>
+      {% for item in collection%}
+          {% assign class = nil %}
+          {% if page.url contains item.url %}
+              {% assign class = 'active' %}
+          {% endif %}
+          <a href="{{ item.url }}" class="{{ class }}">
+              {{ item.title }}
+          </a>
+      {% endfor %}
+    </nav>
 
 {% endfor %}
