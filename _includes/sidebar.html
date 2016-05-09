@@ -46,11 +46,18 @@
       {% for innerCollection in collection %}      
         {% for post in innerCollection %}
 
-          {% if post.categories.size  > 0%}
-               <li class="{{post.categories.size}}">
-                <a href="{{ post.url | prepend: site.baseurl  }}">
-                  {{post.title}} ({{post.categories}})
-                </a>
+          {% if post.categories.size  > 0 %}
+
+             {% assign listClass = 'listitem' %}
+             {% if post.categories.size  = 2 %}
+             {% assign listClass = 'listitem subcategory' %}
+             {% endif %}
+
+
+               <li class="{{listClass}}">
+                    <a href="{{ post.url | prepend: site.baseurl  }}">
+                      {{post.title}} ({{post.categories}})
+                    </a>
               </li>
           {% endif %}
          {% endfor %}    
