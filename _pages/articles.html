@@ -30,7 +30,9 @@ permalink: /articles/
 
 {% for collection in site.collections %}
     <nav>
-      {% for item in collection%}
+      {% assign my_variable = collection.collection %}
+      {{my_variable}}
+      {% for item in collection %}
           {% assign class = nil %}
           {% if page.url contains item.url %}
               {% assign class = 'active' %}
