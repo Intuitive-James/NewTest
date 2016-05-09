@@ -43,12 +43,11 @@
     will-change: transform;
   }
 
-
 .c-navigation__item {
   position: relative;
   display: inline-block;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   @include ff--mono(500);
   @include fs--meta;
   color: $c__white;
@@ -77,9 +76,14 @@
   &.c-navigation__image {
   background: url(http://www.glendesk.co.uk/images/intuitive.png) no-repeat center top;
   width:200px;
-  padding-bottom:40px;
+  padding-bottom:60px;
   margin-right:5%;
   margin-top:14px;
+  float:left;
+  }
+  .c-navigation__text {
+  float:left;
+  margin-top:35px;
   }
 }
 }
