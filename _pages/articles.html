@@ -26,36 +26,6 @@ permalink: /articles/
     {% endif %}
 {% endfor %}
 
-
-<div class="sidebar">
-{% for collection in site.collections %}
- <div class="catbloc" id="{{ category | first | remove:' ' }}">
-  
-  {% assign label = collection.label %}
-
-  <h3>{{label}}</h3>
-  {% for collection in site.categories[label] %}
-    <ul>
-
-      {% for innerCollection in collection %}      
-        {% for post in innerCollection %}
-
-          {% if post.categories.size  > 0%}
-               <li class="{{post.categories.size}}">
-                <a href="{{ post.url | prepend: site.baseurl  }}">
-                  {{post.title}} ({{post.categories}})
-                </a>
-              </li>
-          {% endif %}
-         {% endfor %}    
-      {% endfor %}
-       </ul>
-  {% endfor %}
-
-    </div>
-{% endfor %}
-</div>
-
 <!--
 {% for collection in site.collections %}
   
