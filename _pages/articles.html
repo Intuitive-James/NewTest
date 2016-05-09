@@ -40,7 +40,7 @@ permalink: /articles/
       {% for innerCollection in collection %}      
         {% for post in innerCollection %}
 
-          {% if post.title != "" %}
+          {% if post.title %}
                <li class="{{post.categories.size}}">
                 <a href="{{ post.url | prepend: site.baseurl  }}">
                   {{post.title}}
