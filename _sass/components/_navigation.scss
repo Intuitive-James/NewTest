@@ -18,10 +18,6 @@
   clear:left;
   }
 
-  .navigation-container{
-  width:80%;
-  }
-
   .intuitive-colours {
   width:270px;
   height:8px;
@@ -47,7 +43,7 @@
     position: fixed;
     will-change: transform;
   }
-}
+
 
 .c-navigation__item {
   position: relative;
@@ -86,4 +82,5 @@
   margin-right:5%;
   margin-top:12px;
   }
+}
 }
