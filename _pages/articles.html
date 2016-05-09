@@ -39,8 +39,6 @@ permalink: /articles/
 
       {% for innerCollection in collection %}      
         {% for iinnerCollection in innerCollection %}
-           {{iinnerCollection.title}}
-            {{iinnerCollection.url}}
              <li>
               <a href="{{ iinnerCollection.url | prepend: site.baseurl  }}">
                 {{iinnerCollection.title}}
