@@ -4,9 +4,7 @@
 - title: "Blog"
   href: "/blog/"
 
-- title: "Misc"
+- title: "Flights"
   subcategories:
-    - subtitle: "Example"
-      subhref: "#"
-    - subtitle: "Example2"
-      subhref: "#"
+    - subtitle: "Subcategory"
+      subhref: "/Flights/Subcategory"
