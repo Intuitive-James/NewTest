@@ -43,7 +43,7 @@ permalink: /articles/
           {% if post.categories.size  > 0%}
                <li class="{{post.categories.size}}">
                 <a href="{{ post.url | prepend: site.baseurl  }}">
-                  {{post.title}}
+                  {{post.title}} ({{post.categories}})
                 </a>
               </li>
           {% endif %}
@@ -56,7 +56,6 @@ permalink: /articles/
 {% endfor %}
 </div>
 
-<h1>test</h1>
 <!--
 {% for collection in site.collections %}
   
