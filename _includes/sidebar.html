@@ -48,13 +48,13 @@
 
           {% if post.categories.size  > 0 %}
 
-             {% assign listClass = 'listitem' %}
-             {% if post.categories.size  = 2 %}
-             {% assign listClass = 'listitem subcategory' %}
+             {% assign listclass = 'listitem' %}
+             {% if post.categories.size = 2 %}
+             {% assign listclass = 'listitem subcategory' %}
              {% endif %}
 
 
-               <li class="{{listClass}}">
+               <li class="{{listclass}}">
                     <a href="{{ post.url | prepend: site.baseurl  }}">
                       {{post.title}} ({{post.categories}})
                     </a>
