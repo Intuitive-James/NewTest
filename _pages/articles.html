@@ -34,8 +34,8 @@ permalink: /articles/
   <p>{{label}}</p>
   {% for collection in site.categories[label] %}
    <p> {{collection.url}}newtest
-      {{collection.title}}
-      {{collection.size}}
+      {{collection.title}}##
+      {{collection[1]}}
       </p>
   {% endfor %}
 
