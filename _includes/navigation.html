@@ -1,11 +1,11 @@
 <nav class="c-navigation {% if site.fixedNav == 'true' %}is-fixed{% endif %}">
   <div class="intuitive-colours"> </div>
-  <div class="c-navigation__container u-container">
-  	<container class="navigation__container">
+  <container class="navigation__container">
+  	<div class="c-navigation__container u-container">
 	  	<img class="c-navigation__item c-navigation__image"></img>
 	    <a class="c-navigation__item {% if page.url == '/' %}is-active{% endif %}" href="{{ "/" | prepend: site.baseurl }}">Home</a>
 	    <a class="c-navigation__item {% if page.url == '/articles/' %}is-active{% endif %}" href="{{ "/articles/" | prepend: site.baseurl }}">Articles</a>
 	    <a class="c-navigation__item {% if page.url == '/about/' %}is-active{% endif %}" href="{{ "/about/" | prepend: site.baseurl }}">About</a>
-    </container>
-  </div>
+  	</div>
+  </container>
 </nav>
