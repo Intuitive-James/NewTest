@@ -37,7 +37,7 @@ permalink: /articles/
   {% for collection in site.categories[label] %}
     <ul>
 
-      {% for post in collection %}      
+      {% for innerCollection in collection %}      
         {% for post in innerCollection %}
              <li class="{{post.categories.size}}">
               <a href="{{ post.url | prepend: site.baseurl  }}">
