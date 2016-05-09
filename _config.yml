@@ -9,8 +9,14 @@ theme: grey
 # Build settings
 permalink: :categories/:title.html
 markdown: kramdown
-layout:"post"
 include: [_pages,categories]
 exclude: [_site, CHANGELOG.md, LICENSE, README.md]
 sass:
   style: compressed
+
+  defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
