@@ -28,23 +28,7 @@ permalink: /articles/
 
 
 
-{% for collection in site.collections %}
-    <nav>
-      {% assign my_variable = collection.collection %}
-      {{my_variable}}
-      {% for item in collection %}
-          {% assign class = nil %}
-          {% if page.url contains item.url %}
-              {% assign class = 'active' %}
-          {% endif %}
-          <a href="{{ item.url }}" class="{{ class }}">
-              {{ item.title }}
-          </a>
-      {% endfor %}
-    </nav>
-    <h2>test</h2>
 
-{% endfor %}
 
 {% for issue in site.collections %}
    <p>|</p>
