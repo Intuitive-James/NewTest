@@ -28,4 +28,4 @@ collections:
     Flights:
        output: true
     Contracting:
-       output: true
+       output: false
