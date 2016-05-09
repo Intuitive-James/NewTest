@@ -43,7 +43,7 @@
   {% for collection in site.categories[label] %}
     <ul>
 
-      {% for innerCollection in collection %}      
+      {% for innerCollection in collection[label] %}      
         {% for post in innerCollection %}
 
           {% if post.categories.size  > 0 %}
