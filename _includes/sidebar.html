@@ -48,8 +48,13 @@
 
           {% if post.categories.size  > 0 %}
 
+             {% assign listclass = 'category' %}
+             {% if post.categories.size == 2 %}
+                {% assign listclass = 'subcategory' %}
+             {% endif %}
 
-               <li >
+
+               <li class="{{listclass}}">
                     <a href="{{ post.url | prepend: site.baseurl  }}">
                       {{post.title}} ({{post.categories}})
                     </a>
