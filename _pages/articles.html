@@ -27,6 +27,73 @@ permalink: /articles/
 {% endfor %}
 
 
+<div class="sidebar">
+{% for collection in site.collections %}
+ <div class="catbloc" id="{{ category | first | remove:' ' }}">
+  
+  {% assign label = collection.label %}
+
+  <h3>{{label}}</h3>
+  {% for collection in site.categories[label] %}
+    <ul>
+
+      {% for innerCollection in collection %}      
+        {% for iinnerCollection in innerCollection %}
+           {{iinnerCollection.title}}
+            {{iinnerCollection.url}}
+             <li>
+              <a href="{{ iinnerCollection.url | prepend: site.baseurl  }}">
+                {{iinnerCollection.title}}
+              </a>
+            </li>
+         {% endfor %}    
+      {% endfor %}
+       </ul>
+  {% endfor %}
+
+    </div>
+{% endfor %}
+</div>
+
+
+
+<div class="sidebar">
+ {% for category in site.categories %}
+     <div class="catbloc" id="{{ category | first | remove:' ' }}">
+          <ul>
+             {% for posts in category %}
+               {% for post in posts %}
+                 {% if post.url %}
+                  <li>
+                    <a href="{{ post.url | prepend: site.baseurl  }}">
+                    </a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+
+          {% for category in category.categories %}
+            {% for posts in category %}
+               {% for post in posts %}
+                 {% if post.url %}
+                  <li class="test1">
+                    <a href="{{ post.url | prepend: site.baseurl  }}">              
+                      {{ post.title }}
+                    </a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          {% endfor %}
+         </ul>
+     </div>
+ {% endfor %}
+
+</div>
+
+
+
+
 {% for collection in site.collections %}
   
   {% assign label = collection.label %}
