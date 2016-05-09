@@ -56,4 +56,8 @@
   &.is-active:after {
     background: $c__white;
   }
+
+  &.c-navigation__image {
+  background: blue;
+  }
 }
