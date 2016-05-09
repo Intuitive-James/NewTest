@@ -26,61 +26,6 @@ permalink: /articles/
     {% endif %}
 {% endfor %}
 
- 
-<nav class="animenu">   
-  <input type="checkbox" id="button">
-  <label for="button" onclick>Menu</label> 
-  <ul>
-    {% for nav in site.data.nav %}
-      {% if nav.subcategories != null %}
-    <li>
-      <a href="{{ site.url }}{{ nav.url }}">{{ nav.title }} &#x25BC;</a>
-      <ul>
-        {% for subcategory in nav.subcategories %}
-          <li><a href="{{ site.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
-        {% endfor %}
-      </ul>
-    {% elsif nav.title == page.title %}
-      <li class="active"><a href="{{ nav.url }}">{{ nav.title }}</a></li>
-    {% else %} 
-    <li>
-      <a href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a></li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-</nav> 
-
-<nav class="navbar">
-  <nav class="row">
-    <ul id="nav">
-      <div class="columns large-8 left primary-nav">
-
-    <li id="toggleMenu"><a href="#nav">Menu</a></li>
-    <li id="hideMenu"><a href="#toggleMenu">Menu</a></li>
-    
-    {% for nav in site.data.nav %}
-      {% if nav.subcategories != null %}
-        <li class="dropdown">
-          <a href="{{ site.baseurl }}{{ nav.url }}">{{ nav.title }}</a>
-        <ul>
-          {% for subcategory in nav.subcategories %}
-            <li><a href="{{ site.baseurl }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
-          {% endfor %}
-        </ul>
-        {% else %}
-          <li><a href="{{ site.baseurl }}{{ nav.href }}">{{ nav.title }}</a></li>
-      {% endif %}
-    {% endfor %}
-      </div>
-
-      <div class="columns large-4 right primary-nav">
-    {% for socials in site.data.socials %}
-      <li class="right"><a href="{{ socials.href }}">{{ socials.title }}</a></li>
-    {% endfor %}
-      </div>
-    </ul>
-  </nav>
-</nav>
 
 
 {% for collection in site.collections %}

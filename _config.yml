@@ -20,3 +20,12 @@ sass:
       path: "" # an empty string here means all files in the project
     values:
       layout: "default"
+
+#collections
+collections:
+    Transfers:
+       output: true
+    Flights:
+       output: true
+    Contracting:
+       output: true
