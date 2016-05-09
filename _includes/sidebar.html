@@ -33,7 +33,7 @@
 
 </div>-->
 
-<div class="sidebar">
+<!--<div class="sidebar">
 {% for collection in site.collections %}
  <div class="catbloc" id="{{ category | first | remove:' ' }}">
   
@@ -44,6 +44,45 @@
     <ul>
 
       {% for innerCollection in collection %}      
+        {% for post in innerCollection %}
+         {% if post.categories contains  label %}
+              {% if post.categories.size  > 0 %}
+
+                 {% assign listclass = 'category' %}
+                 {% if post.categories.size == 2 %}
+                    {% assign listclass = 'subcategory' %}
+                 {% endif %}
+
+
+                   <li class="{{listclass}}">
+                        <a href="{{ post.url | prepend: site.baseurl  }}">
+                          {{post.title}} ({{post.categories}})
+                        </a>
+                  </li>
+              {% endif %}
+          {% endif %}
+         {% endfor %}    
+      {% endfor %}
+       </ul>
+  {% endfor %}
+
+    </div>
+{% endfor %}
+</div>-->
+
+
+
+<div class="sidebar">
+{% for collection in site.collections %}
+ <div class="catbloc" id="{{ category | first | remove:' ' }}">
+  
+  {% assign label = collection.label %}
+
+  <h3>{{label}}</h3>
+  {% for categoryloop in site.categories[label] %}
+    <ul>
+
+      {% for innerCollection in categoryloop %}      
         {% for post in innerCollection %}
          {% if post.categories contains  label %}
               {% if post.categories.size  > 0 %}
