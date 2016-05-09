@@ -33,5 +33,9 @@ permalink: /articles/
         <h1><a href="{{ collection.directory }}">{{ collection.title }}</a></h1>
         Label: {{ collection.label }}
         ##{{collection}}
+
+        {% for topic in collection %}
+            ###{{topic}}
+        {% endfor %}
     </section>
 {% endfor %}
