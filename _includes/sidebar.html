@@ -8,10 +8,7 @@
                  {% if post.url %}
                   <li>
                     <a href="{{ post.url | prepend: site.baseurl  }}">              
-                      {{ post.title }}
-                      {{ post.categories.size}}
-                      {{ post.categories}}
-                      {{ post.tags}}
+                      {{ category }}##
                     </a>
                   </li>
                 {% endif %}
