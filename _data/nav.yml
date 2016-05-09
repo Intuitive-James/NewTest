@@ -6,7 +6,7 @@
     - subtitle: "Subcategory"
       subhref: "/contracting/subcategory/SC-Post-1.html"
 
-- title: "Flight"
-  href: "/Flight/C-Post-2.html"
-  url: "/contracting/C-Post-2.html"
+- title: "Flights"
+  href: "/Flights/C-Post-2.html"
+  url: "/Flights/C-Post-2.html"
   subcategories:
