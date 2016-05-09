@@ -80,8 +80,9 @@
 
   <h3>{{label}}</h3>
   {% for categoryloop in site.categories[label] %}
-    <ul>
-
+    <ul>#########################################################################
+    {{categoryloop}}
+    #########################################################################
       {% for innerCollection in categoryloop %}      
         {% for post in innerCollection %}
          {% if post.categories contains  label %}
