@@ -84,12 +84,14 @@
     {% for inincollection in incollection %}
       
       {% for ininincollection in inincollection %}
-
+                {% if post.categories.size  > 0 %}
                    <li class="{{listclass}}">
+
                         <a href="{{ ininincollection.url | prepend: site.baseurl  }}">
                           {{ininincollection.title}} ({{ininincollection.categories}})
                         </a>
                   </li>
+                 {% endif %}
      {% endfor %}
 
     {% endfor %}
