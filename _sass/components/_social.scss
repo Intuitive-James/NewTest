@@ -6,7 +6,7 @@
 .c-social__list {
   max-width: 76rem; // 760px
   margin-right: auto;
-  margin-left: auto;
+  margin-left: $s__mainMarginLeft;
   list-style: none;
 }
 

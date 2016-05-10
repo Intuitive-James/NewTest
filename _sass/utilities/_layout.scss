@@ -5,5 +5,5 @@
 .u-container {
   max-width: $s__mainWidth; // 1160px
   margin-right: auto;
-  margin-left: auto;
+  margin-left: $s__mainMarginLeft;
 }
