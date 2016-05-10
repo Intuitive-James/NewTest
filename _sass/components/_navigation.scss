@@ -8,10 +8,10 @@
 .c-navigation__container {
   top: -8px;
   left: 0;
-  width: 116rem;
+  width: $s__mainWidth;
   z-index: 10;
   padding-bottom:5px;
-  max-width:116rem;
+  max-width: $s__mainWidth;
   position:relative;
   margin:0 auto;
 
