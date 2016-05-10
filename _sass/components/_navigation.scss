@@ -2,7 +2,10 @@
    Navigation
    ========================================================================== */
 .c-navigation{
-  background:pink;
+  &topBar {
+  background:pink;  
+  }
+  }
 
 .c-navigation__container {
   top: -8px;
@@ -89,6 +92,5 @@
   float:left;
   margin-left:15px;
   }
-}
 }
 }
