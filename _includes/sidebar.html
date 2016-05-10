@@ -82,11 +82,15 @@
   {% for incollection in collection %}
 
     {% for inincollection in incollection %}
-      ###
+      
       {% for ininincollection in inincollection %}
-      ##
+
+       {% for inininincollection in ininincollection %}
+          {{ininincollection}
+         {% endfor %}
+      
                 {% if ininincollection.categories.size  > 0 %}
-                #
+                
                    <li class="{{listclass}}">
 
                         <a href="{{ ininincollection.url | prepend: site.baseurl  }}">
@@ -94,6 +98,7 @@
                         </a>
                   </li>
                  {% endif %}
+          }
      {% endfor %}
 
     {% endfor %}
