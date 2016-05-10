@@ -35,30 +35,16 @@ permalink: /articles/
 
 aaa
 {% for collection in site.collections  %}  
-  {% for icollection in collection  %}  
-    {% for post in icollection  %} 
-      <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
-    {% endfor %}
-  {% endfor %}
+  {{collection}}
 {% endfor %}
 
 
 bbb
 {% for collection in site.collections  %}  
-    {% for post in collection.items  %} 
-      <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
-    {% endfor %}
-{% endfor %}
 
-ccc
-{% for collection in site.collections  %}  
-  {% for icollection in collection  %}  
-    {% for post in icollection.items  %} 
-      <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
-    {% endfor %}
+   {{label}}?
+  {% for post in collection.docs %}  
+    {{post}}#
   {% endfor %}
-{% endfor %}
 
-{% for collection in site.collections  %}  
-{{collection}}
 {% endfor %}
