@@ -31,3 +31,10 @@ permalink: /articles/
 {% for post in site.transfers  %}  
   <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
 {% endfor %}
+
+again
+{% for collection in site.collctions  %}  
+  {% for post incollection  %}  
+  <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
+  {% endfor %}
+{% endfor %}
