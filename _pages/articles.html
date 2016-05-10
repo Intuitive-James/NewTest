@@ -33,7 +33,9 @@ permalink: /articles/
 {% endfor %}
 
 {% for collection in site.collections  %}  
-  {% for post in collection  %}  
-  <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
+  {% for icollection in collection  %}  
+    {% for post in icollection  %} 
+      <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
+    {% endfor %}
   {% endfor %}
 {% endfor %}
