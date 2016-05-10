@@ -19,6 +19,7 @@
   
   .c-navigation__text {
   float:left;
+  padding-top:14px;
   }
 
   &:after {
@@ -39,7 +40,7 @@
   position: relative;
   display: inline-block;
   padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
   @include fs--meta;
   color: $c__background;
   text-transform: uppercase;
