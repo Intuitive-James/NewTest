@@ -26,28 +26,6 @@ permalink: /articles/
     {% endif %}
 {% endfor %}
 
-<!--
-{% for collection in site.collections %}
-  
-  {% assign label = collection.label %}
-
-  <p>{{label}}</p>
-  {% for collection in site.categories[label] %}
-
-      #|{% for innerCollection in collection %}
-      <h3>
-        {% for iinnerCollection in innerCollection %}
-           {{iinnerCollection.title}}
-            {{iinnerCollection.url}}
-         {% endfor %}
-     
-      </h3>
-      {% endfor %}|#
-  {% endfor %}
-
-
-{% endfor %}-->
-
 
 <div class="sidebar">
 {% for Transfer in site.Transfers %}
