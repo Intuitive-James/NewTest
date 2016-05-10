@@ -81,7 +81,9 @@
   {% for incollection in collection %}
 
     {% for inincollection in incollection %}
-      {{inincollection}}
+      {{inincollection.title}}
+       {{inincollection.url}}
+       {{inincollection.label}}
     {% endfor %}
 
   {% endfor %}
