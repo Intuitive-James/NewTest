@@ -1,19 +1,15 @@
 /* ==========================================================================
    Navigation
    ========================================================================== */
-.c-navigation{
-  border-top:8px solid $c__topline-colour; 
-  }
 
 .c-navigation__container {
-  top: -8px;
+  top: 0;
   left: 0;
   width: $s__mainWidth;
   z-index: 10;
   padding-bottom:5px;
   max-width: $s__mainWidth;
   position:relative;
-  margin:0 auto;
 
   &u-container {
   padding-top:5px;
