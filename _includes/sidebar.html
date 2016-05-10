@@ -78,16 +78,20 @@
   
   {% assign label = collection.label %}
 
-  <h3>{{label}}</h3>
-  {% for categoryloop in site.categories[label] %}
-  ##
-    <ul>
-    ###
+  {% for incollection in collection %}
+  {{incollection}}
+  {% endfor %}
 
-      {% for innerCollection in categoryloop %}    
-      ####  
+
+  <h3>{{label}}</h3>
+  <!--{% for categoryloop in site.categories[label] %}
+  
+    <ul> 
+
+      {% for innerCollection in categoryloop %}   
+      
         {% for post in innerCollection %}
-          {{post.categories}}
+          
          {% if post.categories contains  label %}
               {% if post.categories.size  > 0 %}
 
@@ -95,7 +99,6 @@
                  {% if post.categories.size == 2 %}
                     {% assign listclass = 'subcategory' %}
                  {% endif %}
-
 
                    <li class="{{listclass}}">
                         <a href="{{ post.url | prepend: site.baseurl  }}">
@@ -107,7 +110,7 @@
          {% endfor %}    
       {% endfor %}
        </ul>
-  {% endfor %}
+  {% endfor %}-->
 
     </div>
 {% endfor %}
