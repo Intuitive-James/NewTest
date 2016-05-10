@@ -121,7 +121,7 @@
             {% for post in collection.docs %}               
                    <li class="{{listclass}} sidebar-subpost">
                         <a href="{{ post.url | prepend: site.baseurl  }}">
-                          {{post.title}}
+                          {{post.title}}||{{post.categories.size }}
                         </a>
                   </li>  
               {% endfor %}          
