@@ -42,8 +42,8 @@ aaa
 bbb
 {% for collection in site.collections  %}  
 
-   {{label}}?
-  {% if label != 'posts' %}
+   {{collection.label}}?
+  {% if collection.label != 'posts' %}
    
       {% for post in collection.docs %}  
         {{post.title}}|
