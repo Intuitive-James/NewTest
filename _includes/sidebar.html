@@ -39,9 +39,9 @@
   
   {% assign label = collection.label %}
 
-  <h3>{{label}}</h3>
+  <h3 class="test">{{label}}</h3>
   {% for collection in site.categories[label] %}
-    <ul>
+    <ul class="sidebar-post">
 
       {% for innerCollection in collection %}      
         {% for post in innerCollection %}
@@ -54,7 +54,7 @@
                  {% endif %}
 
 
-                   <li class="{{listclass}}">
+                   <li class="{{listclass}} sidebar-subpost">
                         <a href="{{ post.url | prepend: site.baseurl  }}">
                           {{post.title}} ({{post.categories}})
                         </a>
