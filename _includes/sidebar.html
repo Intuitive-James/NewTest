@@ -79,7 +79,7 @@
   {% assign label = collection.label %}
 
   <h3>{{label}}</h3>
-  {% for categoryloop in site.categories[label].category %}
+  {% for categoryloop in site.categories[label] %}
     <ul>
 
         {% for post in categoryloop %}
