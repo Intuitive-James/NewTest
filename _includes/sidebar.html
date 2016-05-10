@@ -82,9 +82,11 @@
   {% for incollection in collection %}
 
     {% for inincollection in incollection %}
-      
+      ###
       {% for ininincollection in inincollection %}
+      ##
                 {% if ininincollection.categories.size  > 0 %}
+                #
                    <li class="{{listclass}}">
 
                         <a href="{{ ininincollection.url | prepend: site.baseurl  }}">
@@ -99,34 +101,6 @@
   {% endfor %}
   </ul>
 
-  <!--<h3>{{label}}</h3>
-  {% for categoryloop in site.categories[label] %}
-  
-    <ul> 
-
-      {% for innerCollection in categoryloop %}   
-      
-        {% for post in innerCollection %}
-          
-         {% if post.categories contains  label %}
-              {% if post.categories.size  > 0 %}
-
-                 {% assign listclass = 'category' %}
-                 {% if post.categories.size == 2 %}
-                    {% assign listclass = 'subcategory' %}
-                 {% endif %}
-
-                   <li class="{{listclass}}">
-                        <a href="{{ post.url | prepend: site.baseurl  }}">
-                          {{post.title}} ({{post.categories}})
-                        </a>
-                  </li>
-              {% endif %}
-          {% endif %}
-         {% endfor %}    
-      {% endfor %}
-       </ul>
-  {% endfor %}-->
  </div>
     </div>
 {% endfor %}
