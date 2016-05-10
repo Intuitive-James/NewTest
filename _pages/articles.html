@@ -28,6 +28,8 @@ permalink: /articles/
 
 <h1>updatedn</h1>
 
-{% for post in site.Transfers  %}
+{% for post in site.transfers  %}
+  {{post.name}}##
+  {{post.Title}}||
   {{post}}
 {% endfor %}
