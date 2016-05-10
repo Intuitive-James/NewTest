@@ -13,7 +13,7 @@
 .c-header__title {
   position: relative;
   @include fs--title;
-  color: $c__navigation;
+  color: $c__background;
   left:15px;
 
   span {
