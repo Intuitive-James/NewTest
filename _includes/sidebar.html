@@ -80,9 +80,13 @@
 
   <h3>{{label}}</h3>
   {% for categoryloop in site.categories[label] %}
+  ##
     <ul>
+    ###
 
-        {% for post in categoryloop %}
+      {% for innerCollection in categoryloop %}    
+      ####  
+        {% for post in innerCollection %}
          {% if post.categories contains  label %}
               {% if post.categories.size  > 0 %}
 
@@ -98,11 +102,11 @@
                         </a>
                   </li>
               {% endif %}
-          {% endif %}   
+          {% endif %}
+         {% endfor %}    
       {% endfor %}
        </ul>
   {% endfor %}
 
     </div>
 {% endfor %}
-</div>
