@@ -72,7 +72,7 @@
 
 
 <!-- Reuben messing -->
-<div class="sidebar">
+<!--<div class="sidebar">
 {% for collection in site.collections %}
  <div class="catbloc" id="{{ category | remove:' ' }}">
   
@@ -107,7 +107,46 @@
 
     </div>
 {% endfor %}
+</div>-->
+
+<!-- James messing -->
+<div class="sidebar">
+{% for collection in site.collections %}
+
+  {% if collection.label != 'posts' %}
+     <div class="catbloc" id="{{ category | remove:' ' }}">
+          
+          <h3 class="test">{{collection.label}}</h3>
+            <ul class="sidebar-post">
+            {% for post in collection.docs %}               
+                   <li class="{{listclass}} sidebar-subpost">
+                        <a href="{{ post.url | prepend: site.baseurl  }}">
+                          {{post.title}}
+                        </a>
+                  </li>  
+              {% endfor %}          
+               </ul>
+            </div>
+
+     {% endif %}
+{% endfor %}
 </div>
+
+
+
+{% for collection in site.collections  %}  
+
+   {{collection.label}}
+  {% if collection.label != 'posts' %}
+   
+      {% for post in collection.docs %}  
+        {{post.title}}|
+        {{post.url}}#
+        {{post.collection}}#    
+      {% endfor %}
+     {% endif %}
+
+{% endfor %}
 
 
 <!--<div class="sidebar">
