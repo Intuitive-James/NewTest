@@ -84,7 +84,9 @@
     {% for inincollection in incollection %}
       
       {% for ininincollection in inincollection %}
-
+         {% for inininincollection in ininincollection %}
+            {{inininincollection}}
+           {% endfor %}
 
       
                 {% if ininincollection.categories.size  > 0 %}
@@ -96,7 +98,7 @@
                         </a>
                   </li>
                  {% endif %}
-          }
+          
      {% endfor %}
 
     {% endfor %}
