@@ -35,26 +35,22 @@ permalink: /articles/
 
   <ul class="sidebar-list-list"> 
   {% for incollection in collection %}
-
+           {{incollection.title}}
+              {{incollection.url}}
+              {{incollection.label}}
+              {{incollection.tags.size}}##
     {% for inincollection in incollection %}
-      
+       {{inincollection.title}}
+              {{inincollection.url}}
+              {{inincollection.label}}
+              {{inincollection.tags.size}}||
       {% for ininincollection in inincollection %}
-              {{ininincollection.title}}
-              {{ininincollection.url}}
-              {{ininincollection.label}}
-              {{ininincollection.tags.size}}##
+
 
           {% for inininincollection in ininincollection %}
-              {{inininincollection.title}}
-              {{inininincollection.url}}
-              {{inininincollection.label}}
-              {{inininincollection.tags.size}}||
-
+        
             {% for ininininincollection in inininincollection %}
-              {{ininininincollection.title}}
-              {{ininininincollection.url}}
-              {{ininininincollection.label}}
-              {{ininininincollection.tags.size}}
+   
             {% endfor %}
 
          {% endfor %}
