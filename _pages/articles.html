@@ -25,30 +25,3 @@ permalink: /articles/
         {% endif %}
     {% endif %}
 {% endfor %}
-
-<h1>updated</h1>
-
-{% for post in site.transfers  %}  
-  <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
-{% endfor %}
-
-
-<!--aaa
-{% for collection in site.collections  %}  
-  {{collection}}
-{% endfor %}-->
-
-
-{% for collection in site.collections  %}  
-
-   {{collection.label}}
-  {% if collection.label != 'posts' %}
-   
-      {% for post in collection.docs %}  
-        {{post.title}}|
-        {{post.url}}#
-        {{post.collection}}#    
-      {% endfor %}
-     {% endif %}
-
-{% endfor %}
