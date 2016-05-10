@@ -84,7 +84,14 @@
     {% for inincollection in incollection %}
       
       {% for ininincollection in inincollection %}
-       
+            
+          {% for inininincollection in ininincollection %}
+            yest
+            {% for ininininincollection in inininincollection %}
+              {{ininininincollection}}
+            {% endfor %}
+
+         {% endfor %}
 
       
                 {% if ininincollection.categories.size  > 0 %}
