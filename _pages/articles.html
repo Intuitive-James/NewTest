@@ -32,7 +32,7 @@ permalink: /articles/
   <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
 {% endfor %}
 
-{% for collection in site.collctions  %}  
+{% for collection in site.collections  %}  
   {% for post in collection  %}  
   <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
   {% endfor %}
