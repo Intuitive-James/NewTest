@@ -78,7 +78,7 @@
   
   {% assign label = collection.label %}
 
-  <ul> 
+  <ul class="sidebar-list-list"> 
   {% for incollection in collection %}
 
     {% for inincollection in incollection %}
@@ -99,9 +99,9 @@
       
                 {% if ininincollection.categories.size  > 0 %}
                 
-                   <li class="{{listclass}}">
+                   <li class="{{listclass}} sidebar-postlist">
 
-                        <a href="{{ ininincollection.url | prepend: site.baseurl  }}">
+                        <a class="sidebar-post" href="{{ ininincollection.url | prepend: site.baseurl  }}">
                           {{ininincollection.title}} ({{ininincollection.categories}})
                         </a>
                   </li>
@@ -117,3 +117,4 @@
  </div>
     </div>
 {% endfor %}-->
+
