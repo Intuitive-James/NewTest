@@ -84,7 +84,7 @@
     {% for inincollection in incollection %}
       
       {% for ininincollection in inincollection %}
-                {% if post.categories.size  > 0 %}
+                {% if ininincollection.categories.size  > 0 %}
                    <li class="{{listclass}}">
 
                         <a href="{{ ininincollection.url | prepend: site.baseurl  }}">
