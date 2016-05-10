@@ -28,8 +28,56 @@ permalink: /articles/
 
 <h1>updated</h1>
 <div class="sidebar">
-{% for Transfer in site.Transfers %}
-    {{Transfer.title}}
+{% for collection in site.collections %}
+ <div class="catbloc" id="{{ category | first | remove:' ' }}">
+  
+  {% assign label = collection.label %}
+
+  <ul class="sidebar-list-list"> 
+  {% for incollection in collection %}
+
+    {% for inincollection in incollection %}
+      
+      {% for ininincollection in inincollection %}
+              {{ininincollection.title}}
+              {{ininincollection.url}}
+              {{ininincollection.label}}
+              {{ininincollection.tags.size}}##
+
+          {% for inininincollection in ininincollection %}
+              {{inininincollection.title}}
+              {{inininincollection.url}}
+              {{inininincollection.label}}
+              {{inininincollection.tags.size}}||
+
+            {% for ininininincollection in inininincollection %}
+              {{ininininincollection.title}}
+              {{ininininincollection.url}}
+              {{ininininincollection.label}}
+              {{ininininincollection.tags.size}}
+            {% endfor %}
+
+         {% endfor %}
+
+      
+                {% if ininincollection.categories.size  > 0 %}
+                
+                   <li class="{{listclass}} sidebar-postlist">
+
+                        <a class="sidebar-post" href="{{ ininincollection.url | prepend: site.baseurl  }}">
+                          {{ininincollection.title}} ({{ininincollection.categories}})
+                        </a>
+                  </li>
+                 {% endif %}
+          
+     {% endfor %}
+
+    {% endfor %}
+
+  {% endfor %}
+  </ul>
+
+ </div>
+    </div>
 {% endfor %}
-</div>
 
