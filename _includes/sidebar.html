@@ -78,23 +78,27 @@
   
   {% assign label = collection.label %}
 
+  <ul> 
   {% for incollection in collection %}
 
     {% for inincollection in incollection %}
       
       {% for ininincollection in inincollection %}
-        {{ininincollection.url}}
-        {{ininincollection.label}}
-        {{ininincollection.title}}
+
+                   <li class="{{listclass}}">
+                        <a href="{{ ininincollection.url | prepend: site.baseurl  }}">
+                          {{ininincollection.title}} ({{ininincollection.categories}})
+                        </a>
+                  </li>
      {% endfor %}
 
     {% endfor %}
 
   {% endfor %}
+  </ul>
 
-
-  <h3>{{label}}</h3>
-  <!--{% for categoryloop in site.categories[label] %}
+  <!--<h3>{{label}}</h3>
+  {% for categoryloop in site.categories[label] %}
   
     <ul> 
 
