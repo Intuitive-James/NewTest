@@ -132,23 +132,6 @@
 {% endfor %}
 </div>
 
-
-
-{% for collection in site.collections  %}  
-
-   {{collection.label}}
-  {% if collection.label != 'posts' %}
-   
-      {% for post in collection.docs %}  
-        {{post.title}}|
-        {{post.url}}#
-        {{post.collection}}#    
-      {% endfor %}
-     {% endif %}
-
-{% endfor %}
-
-
 <!--<div class="sidebar">
 {% for collection in site.collections %}
  <div class="catbloc" id="{{ category | first | remove:' ' }}">
