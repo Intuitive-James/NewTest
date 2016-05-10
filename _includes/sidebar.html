@@ -82,13 +82,16 @@
   {% for incollection in collection %}
 
     {% for inincollection in incollection %}
-      t3
+      
       {% for ininincollection in inincollection %}
-            t2
+            
           {% for inininincollection in ininincollection %}
-            t1
+            
             {% for ininininincollection in inininincollection %}
-              {{ininininincollection}}
+              {{ininininincollection.title}}
+              {{ininininincollection.url}}
+              {{ininininincollection.label}}
+              {{ininininincollection.tags.size}}
             {% endfor %}
 
          {% endfor %}
