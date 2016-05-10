@@ -8,6 +8,16 @@ theme: grey
 twitterUsername: intuitivesystem
 githubUsername: intuitive-james
 
+# collections
+collections:
+     transfers:
+        output: true
+     flights:
+        output: true
+     contracting:
+        output: true
+
+
 # Build settings
 permalink: :categories/:title.html
 markdown: kramdown
@@ -23,11 +33,3 @@ sass:
     values:
       layout: "default"
 
-#collections
-collections:
-     transfers:
-		    output: true
-     flights:
-        output: true
-     contracting:
-        output: true
