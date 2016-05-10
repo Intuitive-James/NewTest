@@ -43,10 +43,13 @@ bbb
 {% for collection in site.collections  %}  
 
    {{label}}?
-  {% for post in collection.docs %}  
-    {{post.title}}|
-    {{post.url}}#
-    {{post.collection}}#    
-  {% endfor %}
+  {% if label != 'posts' %}
+   
+      {% for post in collection.docs %}  
+        {{post.title}}|
+        {{post.url}}#
+        {{post.collection}}#    
+      {% endfor %}
+     {% endif %
 
 {% endfor %}
