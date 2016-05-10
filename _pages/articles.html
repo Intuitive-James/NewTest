@@ -33,16 +33,15 @@ permalink: /articles/
 {% endfor %}
 
 
-aaa
+<!--aaa
 {% for collection in site.collections  %}  
   {{collection}}
-{% endfor %}
+{% endfor %}-->
 
 
-bbb
 {% for collection in site.collections  %}  
 
-   {{collection.label}}?
+   {{collection.label}}
   {% if collection.label != 'posts' %}
    
       {% for post in collection.docs %}  
@@ -50,6 +49,6 @@ bbb
         {{post.url}}#
         {{post.collection}}#    
       {% endfor %}
-     {% endif %
+     {% endif %}
 
 {% endfor %}
