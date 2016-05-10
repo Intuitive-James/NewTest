@@ -26,9 +26,8 @@ permalink: /articles/
     {% endif %}
 {% endfor %}
 
-<h1>updatedn</h1>
+<h1>updated</h1>
 
-{% for post in site.transfers  %}
-  {{post.title}}||
-  {{post.date}}
+{% for post in site.transfers  %}  
+  <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
 {% endfor %}
