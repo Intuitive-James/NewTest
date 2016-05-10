@@ -79,7 +79,9 @@
   {% assign label = collection.label %}
 
   {% for incollection in collection %}
-  {{incollection}}
+  {{incollection.title}}
+  {{incollection.url}}
+  {{incollection.label}}
   {% endfor %}
 
 
