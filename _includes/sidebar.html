@@ -87,6 +87,7 @@
       {% for innerCollection in categoryloop %}    
       ####  
         {% for post in innerCollection %}
+          {{post.categories}}
          {% if post.categories contains  label %}
               {% if post.categories.size  > 0 %}
 
