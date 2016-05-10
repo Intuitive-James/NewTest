@@ -1,6 +1,8 @@
 /* ==========================================================================
    Navigation
    ========================================================================== */
+.c-navigation{
+  background:pink;
 
 .c-navigation__container {
   top: 0;
@@ -11,7 +13,6 @@
   max-width:116rem;
   position:relative;
   margin:0 auto;
-  background:pink;
 
   &u-container {
   padding-top:5px;
@@ -88,5 +89,6 @@
   float:left;
   margin-left:15px;
   }
+}
 }
 }
