@@ -26,54 +26,8 @@ permalink: /articles/
     {% endif %}
 {% endfor %}
 
-<h1>updated</h1>
-<div class="sidebar">
-{% for collection in site.collections %}
- <div class="catbloc" id="{{ category | first | remove:' ' }}">
-  
-  {% assign label = collection.label %}
+<h1>updatedn</h1>
 
-  <ul class="sidebar-list-list"> 
-  {% for incollection in collection %}
-           {{incollection.title}}
-              {{incollection.url}}
-              {{incollection.label}}
-              {{incollection.tags.size}}##
-    {% for inincollection in incollection %}
-       {{inincollection.title}}
-              {{inincollection.url}}
-              {{inincollection.label}}
-              {{inincollection.tags.size}}||
-      {% for ininincollection in inincollection %}
-
-
-          {% for inininincollection in ininincollection %}
-        
-            {% for ininininincollection in inininincollection %}
-   
-            {% endfor %}
-
-         {% endfor %}
-
-      
-                {% if ininincollection.categories.size  > 0 %}
-                
-                   <li class="{{listclass}} sidebar-postlist">
-
-                        <a class="sidebar-post" href="{{ ininincollection.url | prepend: site.baseurl  }}">
-                          {{ininincollection.title}} ({{ininincollection.categories}})
-                        </a>
-                  </li>
-                 {% endif %}
-          
-     {% endfor %}
-
-    {% endfor %}
-
-  {% endfor %}
-  </ul>
-
- </div>
-    </div>
+{% for post in site.Transfers  %}
+  {{post}}
 {% endfor %}
-
