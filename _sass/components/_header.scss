@@ -15,6 +15,7 @@
   @include ff--mono(500);
   @include fs--title;
   color: $c__white;
+  left:!5px;
 
   span {
     color: rgba(#fff, .5);
