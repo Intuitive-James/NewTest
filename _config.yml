@@ -25,9 +25,6 @@ sass:
 
 #collections
 collections:
-    Transfers:
-       output: true
-    Flights:
-       output: false
-    Contracting:
-       output: false
+    - Transfers
+    - Flights
+    - Contracting
