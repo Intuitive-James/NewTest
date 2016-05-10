@@ -5,6 +5,8 @@ baseurl: "/NewTest"
 url: "http://intuitive-james.github.io/NewTest/"
 fixedNav: 'false'
 theme: grey
+twitterUsername: intuitivesystem
+githubUsername: intuitive-james
 
 # Build settings
 permalink: :categories/:title.html
