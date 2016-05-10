@@ -55,7 +55,7 @@
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   @include fs--meta;
-  color: $c__white;
+  color: $c__background;
   text-transform: uppercase;
 
   &:not(:last-of-type) {
@@ -75,7 +75,7 @@
 
   &:hover:after,
   &.is-active:after {
-    background: $c__white;
+    background: $c__background;
   }
 
   &.c-navigation__image {
