@@ -9,10 +9,11 @@
   padding-bottom:3rem;
   width: 100%;
   height: auto;
-  background: $c__light-grey;
+  background: $c__dark-grey;
 
   p {
     @include fs--meta;
+    color:c__background;
   }
 
   a:not(:first-of-type) {
