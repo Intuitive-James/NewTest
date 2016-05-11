@@ -1,6 +1,3 @@
-
-<!-- James messing -->
-<div class="sidebar">
 {% for collection in site.collections %}
 
   {% if collection.label != 'posts' %}
@@ -10,11 +7,20 @@
             <ul class="sidebar-post">
 
             {% assign sortedPosts = collection.docs| sort: 'url' %}
+            {% for post in sortedPosts %}    
 
-            {% for post in sortedPosts %}               
+            {% assign listclass = 'post' %}
+            {% assign spliturl = post.url | split: '/' %}
+            {% if spliturl.size == 4 %}
+                {% assign listclass = 'subpost' %}
+            {% elsif  spliturl.size == 5 %}
+                {% assign listclass = 'subsubpost' %}
+            {% elsif  spliturl.size == 6 %}
+                {% assign listclass = 'subsubsubpost' %}    
+            {% endif %}   
                    <li class="{{listclass}} sidebar-subpost">
                         <a href="{{ post.url | prepend: site.baseurl  }}">
-                          {{post.title}}
+                         {{post.title}}
                         </a>
                   </li>  
               {% endfor %}          
