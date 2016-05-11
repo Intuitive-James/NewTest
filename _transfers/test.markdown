@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  "Test"
 date:   2015-12-01 18:52:21 -0500
@@ -35,9 +35,9 @@ test
 >
 >This is the second paragraph in the block quote.
 >
-> ## this is an H2 in a block quote
+> ## this is an H2 in a block quote 
 
-
+ 
 - list1
 - list
 - list 3
