@@ -35,16 +35,22 @@ permalink: /articles/
           <h3 class="test">{{collection.label}}</h3>
             <ul class="sidebar-post">
 
-            {% assign sortedPosts = collection.docs| sort: 'url' %}
+           
 
-            {% for post in sortedPosts %}               
+
+
+            {% assign sortedPosts = collection.docs| sort: 'url' %}
+            {% for post in sortedPosts %}    
+
+            {% assign listclass = 'post' %}
+            {% assign splittedurl = post.url | split: '/' %}
+            % if splittedurl.size != '4' %}
+            {% assign listclass = 'subpost' %}
+            {% endif %}   
+
+
                    <li class="{{listclass}} sidebar-subpost">
                         <a href="{{ post.url | prepend: site.baseurl  }}">
-                        
-                        {% assign splittedurl = post.url | split: '/' %}
-
-                          {{splittedurl.size}}##
-                          {{splittedurl}}
                         </a>
                   </li>  
               {% endfor %}          
