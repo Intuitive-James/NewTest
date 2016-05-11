@@ -9,15 +9,21 @@ list-style:none;
 
 	.sidebar-post{
 
-	margin-left:2.5rem;
-	list-style:none;
-
-
 		.sidebar-subpost{
 
-		margin-left:3.5rem;
+		&.post{
+
+		margin-left:1.5rem;
 		list-style:none;
 
+		}
+
+		&.subpost{
+
+		margin-left:2.5rem;
+		list-style:none;
+
+		}
 
 		}
 
