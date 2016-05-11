@@ -25,3 +25,28 @@ permalink: /articles/
         {% endif %}
     {% endif %}
 {% endfor %}
+
+
+{% for collection in site.collections %}
+
+  {% if collection.label != 'posts' %}
+     <div class="catbloc" id="{{ category | remove:' ' }}">
+          
+          <h3 class="test">{{collection.label}}</h3>
+            <ul class="sidebar-post">
+
+            {% assign sortedPosts = collection.docs| sort: 'url' %}
+
+            {% for post in sortedPosts %}               
+                   <li class="{{listclass}} sidebar-subpost">
+                        <a href="{{ post.url | prepend: site.baseurl  }}">
+                          {{post}}
+                        </a>
+                  </li>  
+              {% endfor %}          
+               </ul>
+            </div>
+
+     {% endif %}
+{% endfor %}
+</div>
