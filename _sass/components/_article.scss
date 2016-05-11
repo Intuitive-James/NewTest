@@ -10,12 +10,9 @@
   max-width: $s__mainWidth; // 760px;
   margin-right: auto;
   margin-left: $s__mainMarginLeft;
-  padding-top: 2.5rem;
-  padding-bottom: 1.5rem;
-  padding-right: 2.5rem;
   @include fs--body;
-  padding-left:15px;
   background:$c__white; 
+  margin: 1rem auto 2rem $s__mainMarginLeft;
 
   > * {
     margin-bottom: 1.8rem;
