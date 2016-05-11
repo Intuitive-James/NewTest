@@ -44,7 +44,7 @@ permalink: /articles/
 
             {% assign listclass = 'post' %}
             {% assign spliturl = post.url | split: '/' %}
-            {% if spliturl.size == '4' %}
+            {% if spliturl.size == 4 %}
                 {% assign listclass = 'subpost' %}
             {% endif %}   
 
