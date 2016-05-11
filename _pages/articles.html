@@ -43,9 +43,9 @@ permalink: /articles/
             {% for post in sortedPosts %}    
 
             {% assign listclass = 'post' %}
-            {% assign splittedurl = post.url | split: '/' %}
-            % if splittedurl.size != '4' %}
-            {% assign listclass = 'subpost' %}
+            {% assign spliturl = post.url | split: '/' %}
+            {% if spliturl.size == '4' %}
+                {% assign listclass = 'subpost' %}
             {% endif %}   
 
 
