@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title:  "Test"
 date:   2015-12-01 18:52:21 -0500
@@ -24,3 +24,31 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 [jekyll-talk]: https://talk.jekyllrb.com/
 
 test
+
+## header 1
+
+## header 2
+
+### header 3
+
+>this is a block quote
+>
+>This is the second paragraph in the block quote.
+>
+> ## this is an H2 in a block quote
+
+
+- list1
+- list
+- list 3
+
+1. ordered list 1
+2. ordered list 2
+3. ordered list 3
+
+
+|cell 1|cell 2|cell 3|
+|cell 4| cell 5| cell 6|
+|cell 7| cell 8| cell 9|
+
+![smiley](https://upload.wikimedia.org/wikipedia/commons/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg)!
