@@ -6,10 +6,10 @@
   padding-top: 3rem; // 75px
   padding-left: 2.5rem;
   padding-right: 2.5rem;
-  padding-bottom:100%;
   width: 100%;
   height: auto;
   background: $c__background;
+  clear:both;
 
   p {
     @include fs--meta;
