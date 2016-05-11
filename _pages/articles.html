@@ -40,7 +40,11 @@ permalink: /articles/
             {% for post in sortedPosts %}               
                    <li class="{{listclass}} sidebar-subpost">
                         <a href="{{ post.url | prepend: site.baseurl  }}">
-                          {{post}}
+                        
+                        {% assign splittedurl = post.url | split: '/' %}
+
+                          {{splittedurl.size}}##
+                          {{splittedurl}}
                         </a>
                   </li>  
               {% endfor %}          
