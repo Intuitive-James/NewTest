@@ -13,7 +13,6 @@
 
   p {
     @include fs--meta;
-    color:$c__background;
   }
 
   a:not(:first-of-type) {
