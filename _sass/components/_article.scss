@@ -13,6 +13,7 @@
   @include fs--body;
   background:$c__white; 
   margin: 1rem auto 2rem $s__mainMarginLeft;
+  padding:1rem 1rem 1rem 1rem;
 
   > * {
     margin-bottom: 1.8rem;
