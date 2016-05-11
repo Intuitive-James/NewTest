@@ -24,6 +24,16 @@
     text-decoration: underline;
   }
 
+.c-header__title {
+  position: relative;
+  @include fs--title;
+  background: $c__white;
+
+  span {
+    color: rgba(#fff, .5);
+  }
+  }
+
   blockquote {
     margin-left: 0;
     width: calc(100% + 5rem);
