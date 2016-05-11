@@ -6,8 +6,6 @@
 
 .c-article__main {
   max-width: $s__mainWidth; // 760px;
-  margin-right: auto;
-  margin-left: $s__mainMarginLeft;
   @include fs--body;
   background:$c__white; 
   margin: 1rem auto 2rem $s__mainMarginLeft;
